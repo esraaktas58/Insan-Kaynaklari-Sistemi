@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <h:outputStylesheet name="/css/bootstrap.min.css"/>
+       
+    </h:head>
+    <h:body>
+    <div class="container">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+        <h:form>
+            <center>
+                <h2><h:outputText value=" Yeni Yönetici Kayıt Sistemi"/></h2>
+            </center>
+                <br></br>
+                 <div class="mb-3">
+                 <center><label class="form-label">Ad Soyad</label> </center>
+                  <h:inputText id="name-id" value="#{register.name}" class="form-control" required="true" requiredMessage="Lütfen Ad Soyad Giriniz.">
+                    </h:inputText>
+                 </div> 
+                <br></br>
+                 <div class="mb-3">
+                  <center><label class="form-label">Email Adresiniz</label> </center>
+                 <h:inputText id="email" value="#{register.email}" class="form-control" required="true" requiredMessage="Lütfen Email Adresinizi Giriniz.">
+                    </h:inputText>
+                 </div>
+            
+                <br></br>
+                 <div class="form-group">
+                    <h:outputLabel for="password" class="control-label col-sm-4">Parola</h:outputLabel>
+                    <div class="col-sm-4">
+                        <h:inputSecret id="password-id" value="#{register.password}" class="form-control" required="true" requiredMessage="Lütfen Parola Giriniz.">
+                        </h:inputSecret>
+                    </div>
+                </div>
+                <br></br>  <br></br>
+                <div class="mb-3">
+                <center><h:commandButton value="Kaydet" action="#{register.save()}" class="btn btn-success" style="width: 80px;"></h:commandButton> </center>
+                 </div>
+                <br></br><br></br>
+        </h:form>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+    </h:body>
+</html>

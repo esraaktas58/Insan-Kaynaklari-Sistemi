@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Anasayfa</title>
+        <h:outputStylesheet name="/css/bootstrap.min.css"/>
+        <style type="text/css">
+                .btn {
+        background-color: DodgerBlue;
+        border: none;
+        color: white;
+        padding: 12px 16px;
+        font-size: 16px;
+        cursor: pointer;
+        }
+        </style>
+    </h:head>
+    <h:body>
+        <div class="container">
+        
+        <div class="row">
+            <h:form>
+            <div class="col-sm-4"><br></br><h:commandButton action = "update.xhtml?faces-redirect=true" value="İş İlanları Güncelle" class="btn btn-primary"> 
+                    </h:commandButton></div>
+            <div class="col-sm-7"><h2 class="display-2">Firma A.Ş İnsan Kaynakları</h2></div> <!--Başlık Kısmı h1 yapıyoruz büyük başlık olsun diye-->
+            <div class="col-sm-1"> <br></br><h:commandButton action = "Kabuldurumu.xhtml?faces-redirect=true" value="Sonuçları Gör" class="btn btn-primary"> 
+                    </h:commandButton></div>
+            </h:form>
+        </div>
+         <br></br>
+         <h:form>
+        <div class="row"> 
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <center>  <img src="https://www.oranokullari.com/uploads/images/insan-kaynaklari.jpg" class="d-block w-100"> </img></center> <!-- image koyuyoruz src kısmına image adresini veriyoruz.-->
+                  </div>
+                </div>
+              </div>
+        </div>
+        <br></br>
+        <div class="row">  <!--div classını row yapıyoruz bu sayede sayfayı yatay bir şekilde bölmüş oluyoruz-->
+            <div class="col-sm-3">
+                
+            </div>      <!--div classını col-sm-3 yapıyoruz bu sayede başlığımızı istediğimiz yerde konumlandırıyoruz.-->
+            <div class="col-sm-6">
+                <h4>Lütfen başvuru yapmak istediğiniz departmanı seçiniz.</h4>
+            </div> 
+            <div class="col-sm-3">
+                
+            </div> 
+        </div>
+        <br></br>
+        <div class="row">
+        <div class="col-sm-4">
+            <div class="card" style="width: 25rem;"> <!--classı card yapıyoruz ve kart görünümü oluyor.-->
+                <div class="card-body">
+                <center>
+                    <h2 class="card-title">Çağrı Merkezi</h2><br></br>
+                    <p class="card-text" style="font-size: 15px;">Çağrı merkezi Departmanına bay-bayan eleman alımı yapılacaktır. Başvuru için Başvuru yap butununa basarak gerekli formu doldurunuz.</p><br></br>
+                 <h:commandButton action = "form.xhtml?faces-redirect=true" value="Başvuru Yap" class="btn btn-primary"> </h:commandButton>
+                </center>
+                </div>
+              </div>
+        </div>
+        <div class="col-sm-4">
+           <div class="card" style="width: 25rem;"> <!--classı card yapıyoruz ve kart görünümü oluyor.-->
+                <div class="card-body">
+                <center>
+                    <h2 class="card-title">Eğitim-Destek Departmanı</h2><br></br>
+                  <p class="card-text" style="font-size: 15px;">Eğitim-Destek Departmanına bay-bayan eleman alımı yapılacaktır. Başvuru için Başvuru yap butununa basarak gerekli formu doldurunuz.</p>
+                 <h:commandButton action = "form.xhtml?faces-redirect=true" value="Başvuru Yap" class="btn btn-primary"> </h:commandButton>
+                </center>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card" style="width: 25rem;"> <!--classı card yapıyoruz ve kart görünümü oluyor.-->
+                <div class="card-body">
+                <center>
+                    <h2 class="card-title">Kalite Yönetim Departmanı</h2><br></br>
+                  <p class="card-text" style="font-size: 15px;">Kalite Yönetim Departmanına bay-bayan eleman alımı yapılacaktır. Başvuru için Başvuru yap butununa basarak gerekli formu doldurunuz.</p>
+                  <h:commandButton action = "form.xhtml?faces-redirect=true" value="Başvuru Yap" class="btn btn-primary"> </h:commandButton>
+                </center>
+                </div>
+            </div>
+            
+        </div>
+        
+        </div>
+        <br></br>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card" style="width: 25rem;"> <!--classı card yapıyoruz ve kart görünümü oluyor.-->
+                    <div class="card-body">
+                    <center>
+                        <h2 class="card-title">Yazılım ve Ar-Ge Departmanı</h2><br></br>
+                      <p class="card-text" style="font-size: 15px;">Yazılım ve Ar-Ge Departmanına bay-bayan eleman alımı yapılacaktır. Başvuru için Başvuru yap butununa basarak gerekli formu doldurunuz.</p>
+                      <h:commandButton action = "form.xhtml?faces-redirect=true" value="Başvuru Yap" class="btn btn-primary"> </h:commandButton> </center>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 25rem;"> <!--classı card yapıyoruz ve kart görünümü oluyor.-->
+                    <div class="card-body">
+                    <center>
+                        <h2 class="card-title">Müşteri İlişkileri ve Satış Departmanı</h2><br></br>
+                      <p class="card-text" style="font-size: 15px;">Müşteri İlişkileri ve Satış Departmanına bay-bayan eleman alımı yapılacaktır. Başvuru için Başvuru yap butununa basarak gerekli formu doldurunuz.</p>
+                    <h:commandButton action = "form.xhtml?faces-redirect=true" value="Başvuru Yap" class="btn btn-primary"> </h:commandButton>
+                    </center>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card" style="width: 25rem;"> <!--classı card yapıyoruz ve kart görünümü oluyor.-->
+                    <div class="card-body">
+                    <center>
+                        <h2 class="card-title">Finans ve Mali İşler Departmanı</h2><br></br>
+                      <p class="card-text" style="font-size: 15px;">Finans ve Mali İşler Departmanına bay-bayan eleman alımı yapılacaktır. Başvuru için Başvuru yap butununa basarak gerekli formu doldurunuz.</p>
+                        <h:commandButton action = "form.xhtml?faces-redirect=true" value="Başvuru Yap" class="btn btn-primary"> </h:commandButton>
+                    </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </h:form>
+    </div>
+    </h:body>
+</html>

@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>İş Başvuru Formu</title>
+        <h:outputStylesheet name="/css/bootstrap.min.css"/>
+       
+    </h:head>
+    <h:body>
+    <div class="container">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+        <h:form>
+            <center>
+                <h2><h:outputText value="İş Başvuru Formu"/>  </h2>
+            </center>
+                <br></br>
+                 <div class="mb-3">
+                 <center><label class="form-label">Ad Soyad</label> </center>
+                  <h:inputText id="name-id" value="#{form.name}" class="form-control" required="true" requiredMessage="Lütfen ad soyad giriniz.">
+                      
+                    </h:inputText>
+                 </div>
+                <br></br>
+                 <div class="mb-3">
+                 <center><label class="form-label">Bildiğiniz Diller</label> </center>
+                 <h:inputText  id="diller" value="#{form.diller}" class="form-control"  required="true" requiredMessage="Lütfen bildiğiniz dilleri giriniz.">
+                        
+                    </h:inputText>
+                 </div>
+                <br></br>
+                 <div class="mb-3">
+                  <center><label class="form-label">Telefon Numaranız</label> </center>
+                  <h:inputText onkeypress="if( (event.which &lt; 48 || event.which &gt; 57) ) return false;" id="telno"  required="true" requiredMessage="Lütfen Telefon Numaranızı Giriniz."  value="#{form.telno}" class="form-control">
+                        
+                    </h:inputText>
+                 </div>
+                <br></br>
+                <div class="mb-3">
+                  <center><label class="form-label">Eğitim</label> </center>
+                  <center>
+                      <h:selectOneMenu value="#{form.egitim}" required="true">
+                        <f:selectItem itemValue="lise" itemLabel="Lise" />
+                        <f:selectItem itemValue="onlisans" itemLabel="Ön Lisans" />
+                        <f:selectItem itemValue="lisans" itemLabel="Lisans" />
+                        <f:selectItem itemValue="yuksek" itemLabel="Yüksek Lisans" />
+                        <f:selectItem itemValue="doktora" itemLabel="Doktora" />
+                      </h:selectOneMenu>
+                   </center>
+                </div>
+                <br></br>
+                 <div class="mb-3">
+                  <center><label class="form-label">Doğum Tarihi</label> </center>
+                 <h:inputText onkeypress="if( (event.which &lt; 48 || event.which &gt; 57) ) return false;" id="dogumtarihi"  required="true" requiredMessage="Lütfen Doğum Tarihini giriniz." value="#{form.dogumtarihi}" class="form-control">
+                 </h:inputText>
+                 </div>
+                <br></br>
+                 <div class="mb-3">
+                  <center><label class="form-label">Cinsiyet</label> </center>
+                 <div class="row">
+                     <div class="col-sm-3"></div>
+                     <div class="col-sm-6">
+                     <h:selectOneRadio value="#{form.cinsiyet}" style="margin-right: 15px;">
+                        <f:selectItem itemValue="Bay" itemLabel="Bay"/>
+                        <f:selectItem itemValue="Bayan" itemLabel="Bayan" />
+                      </h:selectOneRadio>
+                      </div>
+                      <div class="col-sm-3"></div>
+                  </div>
+                 </div>
+                <br></br>
+                 <div class="mb-3">
+                  <center><label class="form-label">Askerlik</label> </center>
+                  <center>
+                     <h:selectOneMenu value="#{form.askerlik}">
+                        <f:selectItem itemValue="Muaf" itemLabel="Muaf" />
+                        <f:selectItem itemValue="Tecilli" itemLabel="Tecilli" />
+                        <f:selectItem itemValue="Yapıldı" itemLabel="Yapıldı" />
+                      </h:selectOneMenu>
+                    </center>
+                 </div>
+                <br></br>
+                 <div class="mb-3">
+                  <center><label class="form-label">Email Adresiniz</label> </center>
+                 <h:inputText id="email" value="#{form.email}" required="true" requiredMessage="Lütfen Email Adresinizi Giriniz."  class="form-control" ></h:inputText>
+                 </div>
+                <br></br>
+                 <div class="mb-3">
+                  <center><label class="form-label">Departman</label> </center>
+                 <center>
+                      <h:selectOneMenu value="#{form.departman}">
+                        <f:selectItem itemValue="cagrı" itemLabel="Çağrı Merkezi" />
+                        <f:selectItem itemValue="egitim" itemLabel="Eğitim-Destek Departmanı" />
+                        <f:selectItem itemValue="ar-ge" itemLabel="Yazılım ve Ar-Ge Departmanı" />
+                        <f:selectItem itemValue="kalite" itemLabel="Kalite Yönetim Departmanı" />
+                        <f:selectItem itemValue="musteri" itemLabel="Müşteri İlişkileri ve Satış Departmanı" />
+                        <f:selectItem itemValue="finans" itemLabel="Finans ve Mali İşler Departmanı" />
+                      </h:selectOneMenu>
+                   </center>
+                 </div>
+                <br></br>
+                 <div class="mb-3">
+                  <center><label class="form-label">Referanslar</label> </center>
+                 <h:inputTextarea id="referans" value="#{form.referans}" required="true" requiredMessage="Lütfen Referanslar alanını doldurunuz."  class="form-control" >
+                    </h:inputTextarea>
+                 </div>
+                <br></br>
+                 <div class="mb-3">
+                  <center><label class="form-label">Kısaca neden sizi seçmeliyiz ?</label> </center>
+                 <h:inputTextarea id="hakkinda" value="#{form.hakkinda}"  required="true" requiredMessage="Lütfen Hakkında alanını doldurunuz."  class="form-control">
+                    </h:inputTextarea>
+                 </div>
+                <br></br>
+                <div class="mb-3">
+                <center><h:commandButton value="Kaydet" action="#{form.save()}" class="btn btn-success" style="width: 80px;"></h:commandButton> </center>
+                 </div>
+                <br></br><br></br>
+        </h:form>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>  
+    </h:body>
+</html>

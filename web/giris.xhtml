@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>    
+        <title>Giriş Sayfası</title>
+        <h:outputStylesheet name="/css/bootstrap.min.css"/>
+    </h:head>
+    <h:body>
+        <br></br>
+           <center><h2 class="display-2">Firma A.Ş İnsan Kaynakları</h2></center>
+         <br></br>
+         <div class="row"> 
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <center>  <img src="https://www.oranokullari.com/uploads/images/insan-kaynaklari.jpg" class="d-block w-100"> </img></center> <!-- image koyuyoruz src kısmına image adresini veriyoruz.-->
+                  </div>
+                </div>
+              </div>
+        </div>
+         <hr></hr>
+        <h:form id="form" class="form-horizontal">
+            <div class="container">
+                <div class="form-group">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-3"> <h:link outcome="girisisbasvuru" value="İş Başvurularını Gör" class="btn btn-primary" /> </div>
+                    <div class="col-sm-3"> <h:link outcome="girisadmin" value="Yönetici Girişi" class="btn btn-primary" /> </div>
+                    <div class="col-sm-3"></div>
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>
